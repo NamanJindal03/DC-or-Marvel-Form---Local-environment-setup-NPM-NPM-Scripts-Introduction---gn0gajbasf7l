@@ -4,9 +4,6 @@ import { useState } from 'react';
 function FormA({ onSubmit, age }) {
   const [show, setShow] = useState('');
   const handleSubmit = (event) => {
-    if(!show){
-      return; 
-    }
     event.preventDefault();
     onSubmit(
       {

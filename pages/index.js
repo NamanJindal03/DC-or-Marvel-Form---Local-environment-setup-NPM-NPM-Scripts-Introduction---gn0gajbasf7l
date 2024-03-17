@@ -10,7 +10,7 @@ const App = () => {
   const [age, setAge] = useState('');
 
   function onSubmit(data){
-    setStep(4);
+   
     setFormData(data);
     console.log(data)
   }
@@ -19,6 +19,12 @@ const App = () => {
     setFormData({});
     setAge('')
   }
+  useEffect(()=>{
+    if (formData.show) {
+      console.log(formData);
+      setStep(4);
+    }
+  },[formData])
 
   return (
     <div>
