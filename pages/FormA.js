@@ -32,7 +32,7 @@ function FormA({ onSubmit, age }) {
         <input type='number' value={age} disabled />
       </label>
       <br />
-      <button id='submit-dc' type='submit'>
+      <button id='submit-dc' type='submit' disabled={!show}>
         Submit
       </button>
     </form>
