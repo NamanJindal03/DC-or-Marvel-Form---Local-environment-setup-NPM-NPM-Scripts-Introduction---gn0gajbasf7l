@@ -4,6 +4,7 @@ function FormB({ onSubmit, age }) {
   const [marvelShows, setMarvelShows] = useState('');
 
   const handleSubmit = (event) => {
+    
     event.preventDefault();
     onSubmit(
       {
@@ -35,7 +36,7 @@ function FormB({ onSubmit, age }) {
         <input type='number' value={age} disabled />
       </label>
       <br />
-      <button id='submit-marvel' type='submit' disabled={!marvelShows}>
+      <button id='submit-marvel' type='submit' >
         Submit
       </button>
     </form>

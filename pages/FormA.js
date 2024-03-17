@@ -4,6 +4,9 @@ import { useState } from 'react';
 function FormA({ onSubmit, age }) {
   const [show, setShow] = useState('');
   const handleSubmit = (event) => {
+    if(!show){
+      return; 
+    }
     event.preventDefault();
     onSubmit(
       {
@@ -32,7 +35,7 @@ function FormA({ onSubmit, age }) {
         <input type='number' value={age} disabled />
       </label>
       <br />
-      <button id='submit-dc' type='submit' disabled={!show}>
+      <button id='submit-dc' type='submit' >
         Submit
       </button>
     </form>
